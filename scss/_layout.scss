@@ -1,0 +1,49 @@
+/* ====================================================
+Base style & container
+==================================================== */
+
+body {
+	color: black;
+	font-family: $font-gothic;
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.4;
+	overflow-x: hidden;
+	background: #730027;
+}
+
+.inner {
+	display: block;
+	max-width: 980px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+.clearfix {
+	*zoom: 1;
+	&:before {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+
+
+
+
+
+
+html.is-locked {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+	body{
+		-webkit-overflow-scrolling: auto;
+	}
+}

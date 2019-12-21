@@ -1,0 +1,281 @@
+main{
+	display: block;
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.bg-border{
+	border: 8px solid #a89c72;
+	background: #fff;
+}
+.sec-main-page{
+	padding: 20px 68px 20px 48px;
+	@include mq(lg){
+		padding: 15px 20px;
+	}
+	@include mq(){
+		padding: 15px;
+	}
+}
+.box-main-form{
+	padding: 0 20px;
+	@include mq(){
+		padding: 0;
+	}
+}
+.box-form{
+	border: 3px solid #999999;
+	position: relative;
+	&-wp{
+		padding: 30px 22px 0;
+		@include mq(){
+			padding: 15px 10px 0;
+		}
+	}
+	.img-zoom{
+		position: absolute;
+		top: 25px;
+		right: -9%;
+		@include mq(){
+			display: none;
+		}
+	}
+	.img-person{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		@include mq(){
+			display: none;
+		}
+	}
+}
+.box-note{
+	font-family: $font-Axis;
+	font-weight: bold;
+	@include font-size(23);
+	color: #730027;
+	background: #f0f0f0;
+	padding: 20px;
+	@include mq(lg){
+		@include font-size(20);
+		p{
+			max-width: 68%;
+		}
+	}
+	@include mq(){
+		padding: 10px;
+	}
+}
+.box-gingivitis{
+	display: flex;
+	padding: 0 22px;
+	margin-top: 40px;
+	@include mq(){
+		flex-wrap: wrap;
+		padding: 0 10px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	&_left{
+		width: calc(100% - 142px);
+		padding-right: 40px;
+		@include mq(){
+			width: 100%;
+			padding-right: 0;
+		}
+		.item{
+			margin-bottom: 30px;
+			@include mq(){
+				margin-bottom: 15px;
+			}
+			&_ttl{
+				@include font-size(16);
+				color: #730027;
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+			p{
+				@include font-size(16);
+				color: #343434;
+				letter-spacing: -2px;
+				line-height: 1.625;
+			}
+		}
+	}
+	&_right{
+		max-width: 142px;
+		@include mq(){
+			max-width: 250px;
+			margin: 0 auto;
+		}
+		.img{
+			margin-bottom: 20px;
+			@include mq(){
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&-style02{
+		.box-gingivitis_left{
+			width: calc(100% - 174px);
+			@include mq(){
+				width: 100%;
+			}
+		}
+		.box-gingivitis_right{
+			max-width: 174px;
+			@include mq(){
+				max-width: 250px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.box-info{
+	margin-bottom: 30px;
+	.ttl{
+		margin-bottom: 30px;
+		@include mq(){
+			margin-bottom: 15px;
+		}
+	}
+	.box-des{
+		padding: 0 20px;
+		font-family: $font-RyuminPro;
+		@include font-size(20);
+		font-weight: bold;
+		@include mq(){
+			@include font-size(18);
+			padding: 0 10px;
+		}
+	}
+}
+.list-checkbox{
+	.item{
+		background: #dbd4ba;
+		padding: 15px;
+		display: flex;
+		margin-bottom: 12px;
+		@include mq(){
+			flex-wrap: wrap;
+		}
+		&_checkbox{
+			width: 50%;
+			position: relative;
+			margin-bottom: 10px;
+			display: flex;
+			@include mq(){
+				width: 100%;
+			}
+		}
+	}
+}
+.ttl-checkbox{
+	font-family: $font-Axis;
+	@include font-size(26);
+	font-weight: bold;
+	color: #781738;
+	padding-left: 25px;
+	position: relative;
+	margin-bottom: 20px;
+	@include mq(){
+		@include font-size(22);
+		padding-left: 30px;
+	}
+	&:before{
+		content: '';
+		display: block;
+		width: 47px;
+		height: 40px;
+		background: url("../img/page01/ttl-check.png") no-repeat center;
+		background-size: cover;
+		position: absolute;
+		left: -20px;
+		top: -4px;
+		@include mq(){
+			left: -10px;
+			top: 0px;
+			width: 35px;
+			height: 28px;
+		}
+	}
+}
+.ttl-yellow{
+	font-family: $font-Axis;
+	@include font-size(24);
+	font-weight: bold;
+	color: #b69327;
+	margin-bottom: 20px;
+	letter-spacing: -3px;
+	@include mq(){
+		@include font-size(20);
+		letter-spacing: 0;
+		margin-bottom: 10px;
+	}
+}
+.ttl-top{
+	font-family: $font-RyuminPro;
+	font-weight: bold;
+	@include font-size(36);
+	color: #781738;
+	line-height: 1;
+	padding-left: 13px;
+	border-left: 3px solid #781738;
+	padding-bottom: 3px;
+	margin-bottom: 100px;
+	@include mq(){
+		@include font-size(30);
+		margin-bottom: 50px;
+		line-height: 1.2;
+	}
+}
+
+input[type="checkbox"] {
+	display:none;
+}
+input[type="checkbox"] + label{
+	font-family: $font-Axis;
+	@include font-size(24);
+	font-weight: bold;
+	color: #781738;
+	padding-left: 40px;
+	letter-spacing: -2px;
+	@include mq(){
+		@include font-size(20);
+		padding-left: 30px;
+	}
+}
+input[type="checkbox"] + label span {
+	display: block;
+	width: 30px;
+	height: 30px;
+	cursor:pointer;
+	background: #fff;
+	border: 2px solid #999999;
+	position: absolute;
+	left: 0;
+	@include mq(lg){
+		top: 2px;
+	}
+	@include mq(){
+		width: 20px;
+		height: 20px;
+		top: 4px;
+	}
+}
+input[type="checkbox"]:checked + label span {
+	&:before{
+		content: '';
+		background: url("../img/page01/ico-check.png") no-repeat center;
+		background-size: 100% 100%;
+		display: block;
+		width: 35px;
+		height: 27px;
+		position: absolute;
+		top: -5px;
+		left: 0px;
+		@include mq(){
+			width: 28px;
+			height: 20px;
+		}
+	}
+}

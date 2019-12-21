@@ -1,0 +1,144 @@
+/* ====================================================
+Font
+==================================================== */
+
+
+@font-face {
+	font-family: 'RyuminPro';
+	src: url('../fonts/RyuminPro-Bold-AlphaNum.eot');
+	src: url('../fonts/RyuminPro-Bold-AlphaNum.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/RyuminPro-Bold-AlphaNum.woff2') format('woff2'),
+	url('../fonts/RyuminPro-Bold-AlphaNum.woff') format('woff'),
+	url('../fonts/RyuminPro-Bold-AlphaNum.ttf') format('truetype'),
+	url('../fonts/RyuminPro-Bold-AlphaNum.svg#RyuminPro-Bold-AlphaNum') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Axis';
+	src: url('../fonts/Axis.eot');
+	src: url('../fonts/Axis.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Axis.woff2') format('woff2'),
+	url('../fonts/Axis.woff') format('woff'),
+	url('../fonts/Axis.ttf') format('truetype'),
+	url('../fonts/Axis.svg#Axis') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+$font-gothic: "ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro", Osaka,"Meiryo","メイリオ","MS Pゴシック",Arial, Helvetica, Verdana,sans-serif;
+$font-mincho: YuMincho,"游明朝", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", 'Sawarabi Mincho',"Yu Mincho","ＭＳ 明朝", "MS Mincho", "HiraMinProN-W3", "TakaoEx明朝", TakaoExMincho, "MotoyaLCedar", "Droid Sans Japanese", serif;
+$font-Yugothic: "游ゴシック体", "Yu Gothic", YuGothic,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro", Osaka,"Meiryo","メイリオ","MS Pゴシック",Arial, Helvetica, Verdana,sans-serif;
+$font-notoJp:'Noto Sans JP',"ヒラギノ角ゴPro W6","Hiragino Kaku Gothic Pro", Osaka,"Meiryo","メイリオ","MS Pゴシック",Arial, Helvetica, Verdana,sans-serif;
+$font-Notoserif :'Noto Serif', YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "游明朝体", "ＭＳ 明朝", "MS Mincho", "HiraMinProN-W3", "TakaoEx明朝", TakaoExMincho, "MotoyaLCedar", "Droid Sans Japanese", serif;
+$font-Roboto :'Roboto Condensed', "游ゴシック体", "Yu Gothic", YuGothic,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro", Osaka,"Meiryo","メイリオ","MS Pゴシック",Arial, Helvetica, Verdana,sans-serif;
+$font-KozGoPro-Bold : 'KozGoPro-Bold';
+$font-KozGoPro-Regular : 'KozGoPro-Regular';
+$font-bebas: 'Bebas-Regular', 'Bebas Neue', cursive;
+$font-RyuminPro: 'RyuminPro';
+$font-Axis: 'Axis';
+@font-face {
+	font-family: $font-KozGoPro-Bold;
+	src: url("../fonts/KozGoPro-Bold.otf");
+}
+@font-face {
+	font-family: $font-KozGoPro-Regular;
+	src: url("../fonts/KozGoPro-Regular.otf");
+}
+
+
+@mixin font-size($sizeValue) {
+	font-size: ($sizeValue) + px;
+	font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin object() {
+	object-fit: cover;
+	font-family: 'object-fit: cover';
+}
+
+@mixin v-align {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+@mixin h-align {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+@mixin v-h-align {
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+@mixin smooth-transition {
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+
+
+
+/* ====================================================
+Media Quary
+==================================================== */
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 990px !default;
+
+$breakpoints: (
+		'xs': 'screen and (max-width: 374px)',
+		'sm': 'screen and (max-width: 640px)',
+		'md': 'screen and (max-width: 768px)',
+		'lg': 'screen and (max-width: 990px)',
+		'ipd': 'screen and (max-width: 1024px)',
+		'xl': 'screen and (max-width: 1200px)',
+		'lp': 'screen and (max-width: 1440px)',
+		'mac': 'screen and (max-width: 1770px)',
+		'sm-min': 'screen and (min-width: 641px)',
+		'md-min': 'screen and (min-width: 768px)',
+		'lg-min': 'screen and (min-width: 991px)',
+		'ipd-min': 'screen and (min-width: 1024px)',
+		'xl-min': 'screen and (min-width: 1201px)',
+) !default;
+
+
+
+@for $i from 1 through 100 {
+	@include mq(md-min){
+		.mbpc-#{$i} {
+			margin-bottom: $i + px !important;
+		}
+	}
+	@include mq(){
+		.mbsp-#{$i} {
+			margin-bottom: $i + px !important;
+		}
+	}
+}

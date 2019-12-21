@@ -1,0 +1,48 @@
+<header id="header">
+	<div class="inner">
+		<a href="" class="logo-plat <% if(pageData.template == 'greeting-01' || pageData.template == 'greeting-02'){ %> greeting <% } %>">
+			<img src="<%= RELATIVE_PATH %>img/common/logo-plat.png" alt="logo">
+		</a>
+		<a href="" class="logo">
+			<img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="logo">
+		</a>
+		<nav class="nav-menu">
+			<ul class="show-menu">
+				<li class="item">
+					<a href="">コンセプト</a>
+				</li>
+				<li class="item">
+					<a href="">ホステル一覧</a>
+				</li>
+				<li class="item">
+					<a href="">よくあるご質問</a>
+				</li>
+				<li class="item">
+					<a href="">ニュース＆イベント</a>
+				</li>
+				<li class="item">
+					<a href="<%= RELATIVE_PATH %>">ご挨拶</a>
+				</li>
+				<li class="item language">
+					<div class="language-bock">
+						<span>
+							<a href="" class="jp active">
+								日本語
+							</a>
+							<a href="" class="en">
+								english
+							</a>
+						</span>
+						<a href="" class="contact-item">お問合せ</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<span class="mobile-icon">
+			<span></span>
+		</span>
+		<span class="plat <% if(pageData.template == 'greeting-01' || pageData.template == 'greeting-02'){ %> hidden <% } %>">
+			<img src="<%= RELATIVE_PATH %>img/common/plat.png" alt="plat">
+		</span>
+	</div>
+</header>
